@@ -1,0 +1,175 @@
+.headertwo {
+    position: absolute;
+    border-bottom: 1px solid grey;
+    padding: 10px 20px;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-left: -40px;
+    z-index: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+.arrowButton {
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    right: 0;
+}
+
+
+.header .logo a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navigation li a:hover {
+    color: #0077cc;
+}
+
+.mark {
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: 25px;
+}
+
+.header {
+    background-color: #bef5bd;
+    padding: 10px 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.arrowButton {
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+}
+
+
+
+.menu {
+    margin-right: 30px;
+    --s: 25px;
+    --c: black;
+
+    height: var(--s);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s)/2) solid #0000;
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+    background:
+        var(--_g2) left var(--_p, 0px) top,
+        var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+        var(--_g2) right var(--_p, 0px) top,
+        var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+    background-size:
+        20% 80%,
+        40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    cursor: pointer;
+    transition:
+        background-position .3s var(--_s, .3s),
+        clip-path 0s var(--_s, .6s);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.menu:before,
+.menu:after {
+    content: "";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform .3s calc(.3s - var(--_s, .3s));
+}
+
+.menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--s));
+    --_s: 0s;
+}
+
+.menu:checked:before {
+    transform: rotate(45deg);
+}
+
+.menu:checked:after {
+    transform: rotate(-45deg);
+}
+
+.menu:focus-visible {
+    clip-path: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
+}
+
+
+.menuItem {
+    padding: 10px;
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.menuItem:hover,
+.menuItem.active {
+    color: rgb(92, 92, 247);
+    text-decoration: none;
+}
