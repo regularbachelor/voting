@@ -1,14 +1,20 @@
-import React from 'react'
-import styles from './page.module.css'
+"use client"
+
+import React, { useState } from 'react';
+import styles from './page.module.css';
+import Image from 'next/image';
+import Dashboard from './components/dashboard/Dashboard'
+import Analitycs from './components/analitycs/Analitycs'
+
+function Page() {
 
 
-function page() {
   return (
-    <div className={styles.main}>
-    <div className={styles.mask}></div>
-    <h1 className={styles.title}>Dashboard</h1>
+    <div>
+      <Dashboard />
+      <Analitycs />
     </div>
-  )
+  );
 }
 
-export default page
+export default Page;
