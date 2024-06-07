@@ -18,7 +18,7 @@ function Analitycs() {
           </div>
           <div className={styles.box}>
             <Linechart />
-            <h2>Share of users by country or region</h2>
+            <h2>User activity over time</h2>
           </div>
         </div>
         <div className={styles.mainboxtwo}>
@@ -26,7 +26,7 @@ function Analitycs() {
             <div className={styles.chart}>
               <Piechart />
             </div>
-            <h2>User activity over time</h2>
+            <h2>Share of users by country or region</h2>
           </div>
         </div>
       </div>

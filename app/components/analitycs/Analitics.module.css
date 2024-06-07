@@ -1,5 +1,4 @@
 .main {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,45 +20,53 @@
     height: 100px;
 }
 
-.mainbox {
+.mainbox, .mainboxtwo {
     width: 90%;
-    height: 450px;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 10px;
     box-sizing: border-box;
 }
 
-.box {
-    width: 40%;
-    height: 400px;
+@media (min-width: 768px) {
+    .mainbox, .mainboxtwo {
+        flex-direction: row;
+    }
+}
+
+.box, .boxtwo {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
-.boxtwo {
-    width: 40%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: top;
-}
-
-.mainboxtwo {
-    width: 90%;
-    height: 450px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+@media (min-width: 768px) {
+    .box, .boxtwo {
+        width: 45%;
+        height: 400px;
+        margin-bottom: 0;
+    }
 }
 
 .chart {
-    width: 400px;
-    height: 600px;
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .chart {
+        width: 400px;
+        height: 600px; 
+        margin-top: 0; 
+    }
 }

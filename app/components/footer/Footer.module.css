@@ -1,0 +1,67 @@
+.main {
+    width: 100%;
+    height: 100px;
+    background-color: #BEF5BD;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+}
+
+.mark {
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: 25px;
+}
+
+
+.block {
+    width: 97%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lnks {
+    font-size: 17px;
+    font-weight:  bold;
+}
+
+.gifContainer {
+    width: 50px; 
+    height: 50px; 
+    background-image: url('../../../public/logout.svg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.gifContainer:hover {
+    background-image: url('../../../public/logout.gif');  
+}
+
+.gifholder {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

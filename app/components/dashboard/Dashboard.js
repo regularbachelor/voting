@@ -84,9 +84,9 @@ function Dashboard() {
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenOne ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Detail 1</div>
-                                <div className={styles.menuitem}>Detail 2</div>
-                                <div className={styles.menuitem}>Detail 3</div>
+                                <div className={styles.menuitem}>Most Popular Voting</div>
+                                <div className={styles.menuitem}>Average Number of Votings</div>
+                                <div className={styles.menuitem}>Active Votings</div>
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,9 @@ function Dashboard() {
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenTwo ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Detail 1</div>
-                                <div className={styles.menuitem}>Detail 2</div>
-                                <div className={styles.menuitem}>Detail 3</div>
+                                <div className={styles.menuitem}>Highest Number of Candidates</div>
+                                <div className={styles.menuitem}>Average Number of Candidates</div>
+                                <div className={styles.menuitem}>Most Active Candidates</div>
                             </div>
                         </div>
                     </div>
@@ -142,9 +142,9 @@ function Dashboard() {
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenThree ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Detail 1</div>
-                                <div className={styles.menuitem}>Detail 2</div>
-                                <div className={styles.menuitem}>Detail 3</div>
+                                <div className={styles.menuitem}>Active Voters</div>
+                                <div className={styles.menuitem}>New Voters</div>
+                                <div className={styles.menuitem}>Average Age of Voters</div>
                             </div>
                         </div>
                     </div>
@@ -171,9 +171,9 @@ function Dashboard() {
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenFour ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Detail 1</div>
-                                <div className={styles.menuitem}>Detail 2</div>
-                                <div className={styles.menuitem}>Detail 3</div>
+                                <div className={styles.menuitem}>Highest Number of Votes</div>
+                                <div className={styles.menuitem}>Average Number of Votes</div>
+                                <div className={styles.menuitem}>Increase in Activity</div>
                             </div>
                         </div>
                     </div>

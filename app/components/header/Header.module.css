@@ -1,5 +1,5 @@
 .headertwo {
-    position: absolute;
+    position: fixed;
     border-bottom: 1px solid grey;
     padding: 10px 20px;
     margin: 0;
@@ -9,11 +9,11 @@
     height: 40px;
     width: 100%;
     margin-left: -40px;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     justify-content: right;
     align-items: center;
-    width: 100%;
+    background-color: white;
 }
 
 .arrowButton {
@@ -71,7 +71,7 @@
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 10;
 }
@@ -79,6 +79,7 @@
 .logo {
     display: flex;
     justify-content: flex-start;
+
 }
 
 .arrowButton {
