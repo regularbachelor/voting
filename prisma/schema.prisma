@@ -66,8 +66,8 @@ model Election {
   id          String     @default(uuid()) @id
   title       String
   description String
-  startDate   Date
-  endDate     Date
+  startDate   DateTime
+  endDate     DateTime
   votes       Vote[]
   results     Result[]
   electionCandidates ElectionCandidate[]
