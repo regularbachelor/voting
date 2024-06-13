@@ -174,3 +174,26 @@
     color: rgb(92, 92, 247);
     text-decoration: none;
 }
+
+@media (max-width: 1200px) { 
+    .menuItem {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .menuItem {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) { 
+    .menuItem {
+        font-size: 10px;
+        width: 28px;
+    }
+
+    .headertwo {
+        padding-left: 50px;
+    }
+}

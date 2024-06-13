@@ -6,11 +6,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .logo {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .logo a {
@@ -19,16 +21,11 @@
     color: #333;
 }
 
-.logo {
-    display: flex;
-}
-
 .mark {
     margin-left: -2px;
     margin-right: -2px;
     margin-top: 25px;
 }
-
 
 .block {
     width: 97%;
@@ -40,7 +37,7 @@
 
 .lnks {
     font-size: 17px;
-    font-weight:  bold;
+    font-weight: bold;
 }
 
 .gifContainer {
@@ -64,4 +61,105 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.mark {
+    margin-bottom: 20px;
+}
+
+/* Медиа-запросы для отзывчивого дизайна */
+@media (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .block {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .gifContainer {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .gifholder {
+        width: 60px;
+        height: 60px;
+    }
+
+    .lnks {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .block {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .gifContainer {
+        width: 30px; 
+        height: 30px;
+    }
+
+    .gifholder {
+        width: 50px;
+        height: 50px;
+    }
+
+    .lnks {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .block {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .logo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .mark {
+        margin-bottom: 20px;
+    }
+
+    .gifContainer {
+        width: 25px; 
+        height: 25px;
+    }
+
+    .gifholder {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lnks {
+        font-size: 12px;
+        text-align: center;
+    }
 }

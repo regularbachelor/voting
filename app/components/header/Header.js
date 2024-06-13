@@ -21,9 +21,9 @@ function Header() {
             }}>
                 <Link href="/" className={styles.menuItem}>DASHBOARD</Link>
                 <Link href="/votings" className={styles.menuItem}>VOTINGS</Link>
-                <Link href="/settings" className={styles.menuItem}>CREATE VOTING</Link>
-                <Link href="/store" className={styles.menuItem}>SETTINGS</Link>
-                <Link href="/store" className={styles.menuItem}>AUDIT LOGS</Link>
+                <Link href="/create" className={styles.menuItem}>CREATE VOTING</Link>
+                <Link href="/settings" className={styles.menuItem}>SETTINGS</Link>
+                <Link href="/logs" className={styles.menuItem}>AUDIT LOGS</Link>
             </div>
             <div className={styles.header}>
                 <div className={styles.logo}>

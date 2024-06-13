@@ -1,45 +1,154 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
-
-
-model Voting {
-  id          Int       @id @default(autoincrement())
-  name        String
-  description String?
-  startTime   DateTime
-  endTime     DateTime
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  candidates  Candidate[]
-  votes       Vote[]
-}
-
-
-model Candidate {
-  id        Int      @id @default(autoincrement())
-  name      String
-  party     String?
-  votingId  Int
-  voting    Voting   @relation(fields: [votingId], references: [id])
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model User {
+  id        UUID      @default(uuid()) @id
+  username  String
+  password  String
+  email     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  settings  Setting[]
+  sessions  Session[]
   votes     Vote[]
+  auditLogs AuditLog[]
+  notifications Notification[]
+  contacts  Contact[]
+  userRoles UserRole[]
 }
 
+model Role {
+  id       UUID       @default(uuid()) @id
+  roleName String
+  userRoles UserRole[]
+}
+
+model UserRole {
+  userId    UUID @id
+  roleId    UUID @id
+  assignedAt DateTime @default(now())
+  
+  user User @relation(fields: [userId], references: [id])
+  role Role @relation(fields: [roleId], references: [id])
+
+  @@id([userId, roleId])
+}
 
 model Vote {
-  id         Int      @id @default(autoincrement())
-  voterId    String
-  candidateId Int
-  candidate  Candidate @relation(fields: [candidateId], references: [id])
-  votingId   Int
-  voting     Voting   @relation(fields: [votingId], references: [id])
-  timestamp  DateTime @default(now())
+  id        UUID     @default(uuid()) @id
+  userId    UUID
+  candidateId UUID
+  electionId UUID
+  timestamp DateTime @default(now())
+
+  user      User @relation(fields: [userId], references: [id])
+  candidate Candidate @relation(fields: [candidateId], references: [id])
+  election  Election @relation(fields: [electionId], references: [id])
 }
 
+model AuditLog {
+  id          UUID     @default(uuid()) @id
+  action      String
+  userId      UUID
+  description String
+  createdAt   DateTime @default(now())
+  
+  user        User @relation(fields: [userId], references: [id])
+}
+
+model Election {
+  id          UUID       @default(uuid()) @id
+  title       String
+  description String
+  startDate   Date
+  endDate     Date
+  votes       Vote[]
+  results     Result[]
+  electionCandidates ElectionCandidate[]
+}
+
+model Result {
+  id          UUID      @default(uuid()) @id
+  electionId  UUID
+  candidateId UUID
+  votesCount  Int
+  createdAt   DateTime @default(now())
+
+  election    Election @relation(fields: [electionId], references: [id])
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+}
+
+model Candidate {
+  id        UUID      @default(uuid()) @id
+  name      String
+  party     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  votes     Vote[]
+  results   Result[]
+  electionCandidates ElectionCandidate[]
+}
+
+model ElectionCandidate {
+  electionId UUID
+  candidateId UUID
+  createdAt DateTime @default(now())
+
+  election  Election @relation(fields: [electionId], references: [id])
+  candidate Candidate @relation(fields: [candidateId], references: [id])
+
+  @@id([electionId, candidateId])
+}
+
+model Setting {
+  id        UUID      @default(uuid()) @id
+  userId    UUID
+  key       String
+  value     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  user      User @relation(fields: [userId], references: [id])
+}
+
+model Session {
+  id        UUID      @default(uuid()) @id
+  userId    UUID
+  token     String
+  createdAt DateTime  @default(now())
+  expiresAt DateTime
+
+  user      User @relation(fields: [userId], references: [id])
+}
+
+model Notification {
+  id        UUID      @default(uuid()) @id
+  userId    UUID
+  message   String
+  read      Boolean
+  createdAt DateTime  @default(now())
+
+  user      User @relation(fields: [userId], references: [id])
+}
+
+model SystemLog {
+  id        UUID      @default(uuid()) @id
+  logLevel  String
+  message   String
+  createdAt DateTime  @default(now())
+}
+
+model Contact {
+  id          UUID      @default(uuid()) @id
+  userId      UUID
+  contactInfo String
+  createdAt   DateTime  @default(now())
+
+  user        User @relation(fields: [userId], references: [id])
+}
