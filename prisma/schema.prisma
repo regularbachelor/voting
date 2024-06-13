@@ -8,7 +8,7 @@ datasource db {
 }
 
 model User {
-  id        UUID      @default(uuid()) @id
+  id        String    @default(uuid()) @id
   username  String
   password  String
   email     String
@@ -24,14 +24,14 @@ model User {
 }
 
 model Role {
-  id       UUID       @default(uuid()) @id
+  id       String     @default(uuid()) @id
   roleName String
   userRoles UserRole[]
 }
 
 model UserRole {
-  userId    UUID @id
-  roleId    UUID @id
+  userId    String
+  roleId    String
   assignedAt DateTime @default(now())
   
   user User @relation(fields: [userId], references: [id])
@@ -41,10 +41,10 @@ model UserRole {
 }
 
 model Vote {
-  id        UUID     @default(uuid()) @id
-  userId    UUID
-  candidateId UUID
-  electionId UUID
+  id        String    @default(uuid()) @id
+  userId    String
+  candidateId String
+  electionId String
   timestamp DateTime @default(now())
 
   user      User @relation(fields: [userId], references: [id])
@@ -53,9 +53,9 @@ model Vote {
 }
 
 model AuditLog {
-  id          UUID     @default(uuid()) @id
+  id          String    @default(uuid()) @id
   action      String
-  userId      UUID
+  userId      String
   description String
   createdAt   DateTime @default(now())
   
@@ -63,7 +63,7 @@ model AuditLog {
 }
 
 model Election {
-  id          UUID       @default(uuid()) @id
+  id          String     @default(uuid()) @id
   title       String
   description String
   startDate   Date
@@ -74,9 +74,9 @@ model Election {
 }
 
 model Result {
-  id          UUID      @default(uuid()) @id
-  electionId  UUID
-  candidateId UUID
+  id          String     @default(uuid()) @id
+  electionId  String
+  candidateId String
   votesCount  Int
   createdAt   DateTime @default(now())
 
@@ -85,7 +85,7 @@ model Result {
 }
 
 model Candidate {
-  id        UUID      @default(uuid()) @id
+  id        String    @default(uuid()) @id
   name      String
   party     String
   createdAt DateTime  @default(now())
@@ -96,8 +96,8 @@ model Candidate {
 }
 
 model ElectionCandidate {
-  electionId UUID
-  candidateId UUID
+  electionId String
+  candidateId String
   createdAt DateTime @default(now())
 
   election  Election @relation(fields: [electionId], references: [id])
@@ -107,8 +107,8 @@ model ElectionCandidate {
 }
 
 model Setting {
-  id        UUID      @default(uuid()) @id
-  userId    UUID
+  id        String    @default(uuid()) @id
+  userId    String
   key       String
   value     String
   createdAt DateTime  @default(now())
@@ -118,8 +118,8 @@ model Setting {
 }
 
 model Session {
-  id        UUID      @default(uuid()) @id
-  userId    UUID
+  id        String    @default(uuid()) @id
+  userId    String
   token     String
   createdAt DateTime  @default(now())
   expiresAt DateTime
@@ -128,8 +128,8 @@ model Session {
 }
 
 model Notification {
-  id        UUID      @default(uuid()) @id
-  userId    UUID
+  id        String    @default(uuid()) @id
+  userId    String
   message   String
   read      Boolean
   createdAt DateTime  @default(now())
@@ -138,15 +138,15 @@ model Notification {
 }
 
 model SystemLog {
-  id        UUID      @default(uuid()) @id
+  id        String    @default(uuid()) @id
   logLevel  String
   message   String
   createdAt DateTime  @default(now())
 }
 
 model Contact {
-  id          UUID      @default(uuid()) @id
-  userId      UUID
+  id          String    @default(uuid()) @id
+  userId      String
   contactInfo String
   createdAt   DateTime  @default(now())
 

@@ -6,7 +6,7 @@ const actions = [
   { date: '2024-06-13', time: '10:00:00', userId: 1, type: 'Login', status: 'Success', signature: 'e73a5b1c7f2e4d8c9a6b0d3f7e2a5b1c', details: '', comments: '' },
   { date: '2024-06-13', time: '10:05:00', userId: 2, type: 'Registration', status: 'Success', signature: '4d53e8f3e5d9c0b7c1f8e3b6d2f4e', details: '', comments: '' },
   { date: '2024-06-13', time: '10:10:00', userId: 1, type: 'Voting', status: 'Success', signature: 'b39c4d2e4f6e0b1c8d2f9e4c7b3f5d', details: 'Candidate: Goncharenko', comments: '' },
-  { date: '2024-06-13', time: '10:15:00', userId: 3, type: 'Password change', status: 'Failure', signature: '5c68d9e0d7e1c9b2d3f0e5d8c4f6e7b', details: '', comments: 'Incorrect password' },
+  { date: '2024-06-13', time: '10:15:00', userId: 3, type: 'Password change', status: 'Failure', signature: '5c68d9e0d7e1c9b2d3f0e5d8c4f6e7b', details: 'Incorrect password', comments: 'Incorrect password' },
   { date: '2024-06-14', time: '10:20:00', userId: 1, type: 'Login', status: 'Success', signature: 'a68d9e0d7e1c9b2d3f0e5d8c4f6e7b', details: '', comments: '' },
   { date: '2024-06-14', time: '10:20:00', userId: 1, type: 'Login', status: 'Success', signature: 'a68d9e0d7e1c9b2d3f0e5d8c4f6e7b', details: '', comments: '' },
   { date: '2024-06-14', time: '10:20:00', userId: 1, type: 'Login', status: 'Success', signature: 'a68d9e0d7e1c9b2d3f0e5d8c4f6e7b', details: '', comments: '' },
@@ -69,7 +69,6 @@ function Page() {
                 <th>Status</th>
                 <th>Signature</th>
                 <th>Action Details</th>
-                <th>Comments</th>
               </tr>
             </thead>
             <tbody>
@@ -91,7 +90,6 @@ function Page() {
                       <td className={styles.cell}>{action.status}</td>
                       <td className={styles.cell}>{action.signature}</td>
                       <td className={styles.cell}>{action.details}</td>
-                      <td className={styles.cell}>{action.comments}</td>
                     </tr>
                   </React.Fragment>
                 );
