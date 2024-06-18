@@ -1,0 +1,179 @@
+.main {
+    width: 100%;
+    height: 1300px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .center {
+    height: 700px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  
+  .top {
+    background-color: rgb(232, 230, 230);
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-top: 3px solid #2B90C8;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-weight: 600;
+    margin-top: 0;
+    color: rgb(59, 103, 130);
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+  
+  .txt {
+    font-size: 14px;
+    margin-right: 10px;
+    color: grey;
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+  
+  .txtwo {
+    font-size: 14px;
+    margin-right: 10px;
+    color: rgb(68, 179, 248);
+    margin-bottom: 0;
+    box-sizing: border-box;
+  }
+  
+  .textbox {
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  .txthree {
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+  }
+  
+  .bottom {
+    height: 350px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .candidate {
+    background-color: #EDF7ED;
+    height: 30px;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+  }
+  
+  .purpose {
+    margin-top: 0;
+    font-weight: 400;
+    height: 100px;
+  }
+  
+  .star {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .txtfour {
+    font-size: 17px;
+    color: grey;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    padding: 0 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid black;
+  }
+  
+  .button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected {
+    background-color: #61B1E3 !important;
+    color: white;
+  }
+  
+  .selected:hover {
+    background-color: #61B1E3;
+  }
+  
+  .image {
+    width: 38px;
+    height: 43px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+  
+  .details {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .detailsPopup {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    z-index: 10;
+  }
+
+  .nextbox {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+  } 
+  
+  .next {
+    width: 100px;
+    height: 40px;
+    background-color: #61B1E3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .next:hover {
+    background-color: #7dc6f3;
+    cursor: pointer;
+  }
+

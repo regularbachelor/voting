@@ -16,10 +16,10 @@ function Footer() {
                     /><h2>ting</h2>
                 </div>
                 <Link href="/" className={styles.menuItem}>
-                    <p className={styles.lnks}>User Guide</p>
+                    <p className={styles.lnks}>Керівництво користувача</p>
                 </Link>
                 <Link href="/" className={styles.menuItem}>
-                    <p className={styles.lnks}>Feedback Form</p>
+                    <p className={styles.lnks}>Форма зворотного зв'язку</p>
                 </Link>
                 <div className={styles.gifholder}>
                     <div className={styles.gifContainer}></div>

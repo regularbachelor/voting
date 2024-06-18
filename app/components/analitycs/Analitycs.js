@@ -9,16 +9,16 @@ function Analitycs() {
     <div className={styles.main}>
       <div className={styles.holder}>
         <div className={styles.titlebox}>
-          <h1>Statistics in the form of graphs</h1>
+          <h1>Статистика у вигляді графіків</h1>
         </div>
         <div className={styles.mainbox}>
           <div className={styles.box}>
             <Histogram />
-            <h2>Breakdown of users by age group</h2>
+            <h2>Розподіл користувачів за віковими групами</h2>
           </div>
           <div className={styles.box}>
             <Linechart />
-            <h2>User activity over time</h2>
+            <h2>Активність користувача з часом</h2>
           </div>
         </div>
         <div className={styles.mainboxtwo}>
@@ -26,7 +26,7 @@ function Analitycs() {
             <div className={styles.chart}>
               <Piechart />
             </div>
-            <h2>Share of users by country or region</h2>
+            <h2>Частка користувачів за країною чи регіоном</h2>
           </div>
         </div>
       </div>

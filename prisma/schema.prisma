@@ -8,36 +8,11 @@ datasource db {
 }
 
 model User {
-  id        String    @default(uuid()) @id
-  username  String
+  id        String   @id @default(uuid())
+  email     String   @unique
   password  String
-  email     String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  settings  Setting[]
-  sessions  Session[]
-  votes     Vote[]
-  auditLogs AuditLog[]
-  notifications Notification[]
-  contacts  Contact[]
-  userRoles UserRole[]
-}
-
-model Role {
-  id       String     @default(uuid()) @id
-  roleName String
-  userRoles UserRole[]
-}
-
-model UserRole {
-  userId    String
-  roleId    String
-  assignedAt DateTime @default(now())
-  
-  user User @relation(fields: [userId], references: [id])
-  role Role @relation(fields: [roleId], references: [id])
-
-  @@id([userId, roleId])
+  birthday  DateTime
+  votes     Vote[]   // Added this line to establish the relationship
 }
 
 model Vote {
@@ -50,16 +25,6 @@ model Vote {
   user      User @relation(fields: [userId], references: [id])
   candidate Candidate @relation(fields: [candidateId], references: [id])
   election  Election @relation(fields: [electionId], references: [id])
-}
-
-model AuditLog {
-  id          String    @default(uuid()) @id
-  action      String
-  userId      String
-  description String
-  createdAt   DateTime @default(now())
-  
-  user        User @relation(fields: [userId], references: [id])
 }
 
 model Election {
@@ -104,51 +69,4 @@ model ElectionCandidate {
   candidate Candidate @relation(fields: [candidateId], references: [id])
 
   @@id([electionId, candidateId])
-}
-
-model Setting {
-  id        String    @default(uuid()) @id
-  userId    String
-  key       String
-  value     String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-
-  user      User @relation(fields: [userId], references: [id])
-}
-
-model Session {
-  id        String    @default(uuid()) @id
-  userId    String
-  token     String
-  createdAt DateTime  @default(now())
-  expiresAt DateTime
-
-  user      User @relation(fields: [userId], references: [id])
-}
-
-model Notification {
-  id        String    @default(uuid()) @id
-  userId    String
-  message   String
-  read      Boolean
-  createdAt DateTime  @default(now())
-
-  user      User @relation(fields: [userId], references: [id])
-}
-
-model SystemLog {
-  id        String    @default(uuid()) @id
-  logLevel  String
-  message   String
-  createdAt DateTime  @default(now())
-}
-
-model Contact {
-  id          String    @default(uuid()) @id
-  userId      String
-  contactInfo String
-  createdAt   DateTime  @default(now())
-
-  user        User @relation(fields: [userId], references: [id])
 }

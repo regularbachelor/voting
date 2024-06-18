@@ -4,7 +4,7 @@ import 'chart.js/auto';
 
 const LineChart = () => {
   const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень'],
     datasets: [
       {
         label: 'User Activity',
@@ -22,13 +22,13 @@ const LineChart = () => {
       x: {
         title: {
           display: true,
-          text: 'Months',
+          text: 'Місяці',
         },
       },
       y: {
         title: {
           display: true,
-          text: 'Activity Level',
+          text: 'Рівень активності',
         },
         beginAtZero: true,
       },

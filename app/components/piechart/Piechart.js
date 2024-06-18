@@ -15,10 +15,10 @@ const countryCodes = {
 
 const PieChartWithFlags = () => {
   const data = {
-    labels: ['USA', 'Canada', 'UK', 'Germany', 'Australia', 'France'],
+    labels: ['США', 'Канада', 'Великобританія', 'Німеччина', 'Австралія', 'Франція'],
     datasets: [
       {
-        label: 'User Distribution by Country',
+        label: 'Розподіл користувачів за країнами',
         data: [300, 150, 100, 80, 70, 50],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',

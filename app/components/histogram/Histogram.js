@@ -7,7 +7,7 @@ const Histogram = () => {
     labels: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'],
     datasets: [
       {
-        label: 'Number of Users',
+        label: 'Кількість користувачів',
         data: [45, 30, 50, 35, 25, 20],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',

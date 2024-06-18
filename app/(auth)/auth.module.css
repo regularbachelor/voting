@@ -1,0 +1,41 @@
+.html,
+.body {
+  font-family: 'Inter', sans-serif;
+  padding-top: 50px;
+}
+
+
+
+.html,
+.body {
+  margin: 0;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: white;
+  color: black;
+  overflow: auto;
+}
+
+.bd {
+  display: flex;
+}
+
+
+@media (max-width: 767px) { 
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/public/ground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: white;
+    color: var(--text-color);
+  }
+}

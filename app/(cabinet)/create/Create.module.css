@@ -1,0 +1,155 @@
+.main {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.box {
+    width: 80%;
+    height: 600px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.title {
+    color: #1EA4FB;
+    font-size: 25px;
+}
+
+.txt {
+    margin-right: 20px;
+}
+
+.titlebox {
+    display: flex;
+    align-items: center;
+}
+
+.num {
+    width: 50%;
+    max-width: 150px;
+    height: 20px;
+    padding: 12px 20px;
+    padding-left: 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.num:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: none;
+}
+
+.num:hover {
+    border-color: #888;
+}
+
+.num::placeholder {
+    color: #999;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.optionBox {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.optionBox .header {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.optionBox ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.optionBox li {
+    margin-bottom: 10px;
+}
+
+.optionBox li:last-child {
+    list-style-type: disc;
+}
+
+.redBorder {
+    border-top: 5px solid #ff4d4d;
+}
+
+.greenBorder {
+    border-top: 5px solid #4CAF50;
+}
+
+.purpleBorder {
+    border-top: 5px solid #9C27B0;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.demoButton {
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.demoButton:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.6);
+}
+
+.demoButton:active {
+    background-color: #004494;
+}
+
+@media (max-width: 768px) {
+    .num {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .num {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .optionBox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

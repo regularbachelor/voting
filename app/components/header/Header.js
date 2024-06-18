@@ -19,11 +19,11 @@ function Header() {
                 transform: `translateY(${isExpanded ? '45px' : '0px'})`,
                 transition: 'transform 0.3s ease-in-out' 
             }}>
-                <Link href="/" className={styles.menuItem}>DASHBOARD</Link>
-                <Link href="/votings" className={styles.menuItem}>VOTINGS</Link>
-                <Link href="/create" className={styles.menuItem}>CREATE VOTING</Link>
-                <Link href="/settings" className={styles.menuItem}>SETTINGS</Link>
-                <Link href="/logs" className={styles.menuItem}>AUDIT LOGS</Link>
+                <Link href="/" className={styles.menuItem}>ПАНЕЛЬ СТАТИСТИКИ</Link>
+                <Link href="/votings" className={styles.menuItem}>ГОЛОСУВАННЯ</Link>
+                <Link href="/create" className={styles.menuItem}>СТВОРИТИ ГОЛОСУВАННЯ</Link>
+                <Link href="/settings" className={styles.menuItem}>НАЛАШТУВАННЯ</Link>
+                <Link href="/logs" className={styles.menuItem}>ЖУРНАЛИ АУДИТУ</Link>
             </div>
             <div className={styles.header}>
                 <div className={styles.logo}>

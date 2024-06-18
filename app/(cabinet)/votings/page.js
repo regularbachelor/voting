@@ -6,6 +6,7 @@ import styles from './Votings.module.css';
 function Page() {
     const [isActiveExpanded, setIsActiveExpanded] = useState(true);
     const [isCompletedExpanded, setIsCompletedExpanded] = useState(true);
+    const [isUnderConstructionExpanded, setIsUnderConstructionExpanded] = useState(true);
 
     const toggleActiveExpand = () => {
         setIsActiveExpanded(!isActiveExpanded);
@@ -13,6 +14,10 @@ function Page() {
 
     const toggleCompletedExpand = () => {
         setIsCompletedExpanded(!isCompletedExpanded);
+    };
+
+    const toggleUnderConstructionExpand = () => {
+        setIsUnderConstructionExpanded(!isUnderConstructionExpanded);
     };
 
     const getVotesPadding = (votes) => {
@@ -35,19 +40,19 @@ function Page() {
                         <table className={styles.table}>
                             <thead>
                                 <tr className={styles.types}>
-                                    <th>Type</th>
-                                    <th>Title</th>
-                                    <th>Closes</th>
-                                    <th>Votes</th>
-                                    <th>Turnout</th>
-                                    <th>Voters</th>
-                                    <th className={styles['reports-header']}>Reports</th>
+                                    <th>Тип</th>
+                                    <th>Назва</th>
+                                    <th>Закривається</th>
+                                    <th>Голоси</th>
+                                    <th>Явка</th>
+                                    <th>Виборці</th>
+                                    <th className={styles['reports-header']}>Звіти</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.variantone}>Political</div></td>
-                                    <td className={styles.name}>Spring Prom Court</td>
+                                    <td className={styles.fix}><div className={styles.variantone}>Політичний</div></td>
+                                    <td className={styles.name}>Весняний випускний суд</td>
                                     <td className={styles.time}>3d 10h 47m</td>
                                     <td style={getVotesPadding(0)}>0</td>
                                     <td>0.00%</td>
@@ -55,8 +60,8 @@ function Page() {
                                     <td className={styles.reports}><div className={styles.gifContainer}></div></td>
                                 </tr>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.varianttwo}>Corporate</div></td>
-                                    <td className={styles.name}>Board of Directors</td>
+                                    <td className={styles.fix}><div className={styles.varianttwo}>Корпоративний</div></td>
+                                    <td className={styles.name}>Рада директорів</td>
                                     <td className={styles.time}>4d 8h 15m</td>
                                     <td style={getVotesPadding(100)}>100</td>
                                     <td>0.00%</td>
@@ -64,8 +69,8 @@ function Page() {
                                     <td className={styles.reports}><div className={styles.gifContainer}></div></td>
                                 </tr>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.variantthree}>Community</div></td>
-                                    <td className={styles.name}>Board of Directors</td>
+                                    <td className={styles.fix}><div className={styles.variantthree}>Спільнота</div></td>
+                                    <td className={styles.name}>Рада директорів</td>
                                     <td className={styles.time}>4d 8h 15m</td>
                                     <td style={getVotesPadding(100)}>100</td>
                                     <td>0.00%</td>
@@ -77,32 +82,32 @@ function Page() {
                     </div>
                 </div>
                 <div className={styles.box}>
-                    <div className={styles.active} onClick={toggleCompletedExpand}>
-                        <p className={styles.title}>UNDER CONSTRUCTION</p>
-                        <button className={`${styles.button} ${isCompletedExpanded ? styles.minus : styles.plus}`}>
-                            {isCompletedExpanded ? '-' : '+'}
+                    <div className={styles.active} onClick={toggleUnderConstructionExpand}>
+                        <p className={styles.title}>У РОЗРОБЦІ</p>
+                        <button className={`${styles.button} ${isUnderConstructionExpanded ? styles.minus : styles.plus}`}>
+                            {isUnderConstructionExpanded ? '-' : '+'}
                         </button>
                     </div>
-                    <div className={`${styles.hide} ${isCompletedExpanded ? styles.show : ''}`}>
+                    <div className={`${styles.hide} ${isUnderConstructionExpanded ? styles.show : ''}`}>
                         <table className={styles.table}>
                             <thead>
                                 <tr className={styles.types}>
-                                    <th>Type</th>
-                                    <th>Title</th>
-                                    <th>Voters</th>
-                                    <th className={styles['reports-header']}>Info</th>
+                                    <th>Тип</th>
+                                    <th>Назва</th>
+                                    <th>Виборці</th>
+                                    <th className={styles['reports-header']}>Інформація</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.variantone}>Political</div></td>
-                                    <td className={styles.name}>Spring Prom Court</td>
+                                    <td className={styles.fix}><div className={styles.variantone}>Політичний</div></td>
+                                    <td className={styles.name}>Весняний випускний суд</td>
                                     <td style={getVotesPadding(9)}>9</td>
                                     <td className={styles.reports}><div className={styles.gifContainertwo}></div></td>
                                 </tr>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.varianttwo}>Corporate</div></td>
-                                    <td className={styles.name}>Board of Directors</td>
+                                    <td className={styles.fix}><div className={styles.varianttwo}>Корпоративний</div></td>
+                                    <td className={styles.name}>Рада директорів</td>
                                     <td style={getVotesPadding(9)}>9</td>
                                     <td className={styles.reports}><div className={styles.gifContainertwo}></div></td>
                                 </tr>
@@ -112,7 +117,7 @@ function Page() {
                 </div>
                 <div className={styles.box}>
                     <div className={styles.active} onClick={toggleCompletedExpand}>
-                        <p className={styles.title}>COMPLETED</p>
+                        <p className={styles.title}>ЗАВЕРШЕНО</p>
                         <button className={`${styles.button} ${isCompletedExpanded ? styles.minus : styles.plus}`}>
                             {isCompletedExpanded ? '-' : '+'}
                         </button>
@@ -121,26 +126,26 @@ function Page() {
                         <table className={styles.table}>
                             <thead>
                                 <tr className={styles.types}>
-                                    <th>Type</th>
-                                    <th>Title</th>
-                                    <th>Votes</th>
-                                    <th>Turnout</th>
-                                    <th>Voters</th>
-                                    <th className={styles['reports-header']}>Reports</th>
+                                    <th>Тип</th>
+                                    <th>Назва</th>
+                                    <th>Голосів</th>
+                                    <th>Явка</th>
+                                    <th>Виборці</th>
+                                    <th className={styles['reports-header']}>Звіти</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.variantone}>Political</div></td>
-                                    <td className={styles.name}>Spring Prom Court</td>
+                                    <td className={styles.fix}><div className={styles.variantone}>Політичний</div></td>
+                                    <td className={styles.name}>Весняний випускний суд</td>
                                     <td style={getVotesPadding(0)}>0</td>
                                     <td>0.00%</td>
                                     <td style={getVotesPadding(9)}>9</td>
                                     <td className={styles.reports}><div className={styles.gifContainer}></div></td>
                                 </tr>
                                 <tr className={styles.content}>
-                                    <td className={styles.fix}><div className={styles.varianttwo}>Corporate</div></td>
-                                    <td className={styles.name}>Board of Directors</td>
+                                    <td className={styles.fix}><div className={styles.varianttwo}>Корпоративний</div></td>
+                                    <td className={styles.name}>Рада директорів</td>
                                     <td style={getVotesPadding(100)}>100</td>
                                     <td>0.00%</td>
                                     <td style={getVotesPadding(9)}>9</td>

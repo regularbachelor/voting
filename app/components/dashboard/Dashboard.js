@@ -30,7 +30,7 @@ function Dashboard() {
             <div className={styles.mask}></div>
             <div className={styles.content}>
                 <div className={styles.titleblock}>
-                    <h1 className={styles.title}>Dashboard</h1>
+                    <h1 className={styles.title}>Панель статистики</h1>
                     <div className={styles.share}>
                         <svg
                             fill="#000000"
@@ -65,7 +65,7 @@ function Dashboard() {
                         <div className={styles.top}>
                             <div className={styles.left}>
                                 <h1 className={styles.num}>3</h1>
-                                <p className={styles.text}>Total Votings</p>
+                                <p className={styles.text}>Загальна кількість голосів</p>
                             </div>
                             <div className={styles.right}>
                                 <Image
@@ -77,16 +77,16 @@ function Dashboard() {
                             </div>
                         </div>
                         <div className={styles.bottom} onClick={toggleMenuOne}>
-                            <p className={styles.btext}>More info
+                            <p className={styles.btext}>Більше інформації
                                 <span
                                     className={styles.arrow}
                                     style={{ transform: menuOpenOne ? 'rotate(180deg)' : 'rotate(0deg)' }}
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenOne ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Most Popular Voting</div>
-                                <div className={styles.menuitem}>Average Number of Votings</div>
-                                <div className={styles.menuitem}>Active Votings</div>
+                                <div className={styles.menuitem}>Найпопулярніше голосування</div>
+                                <div className={styles.menuitem}>Середня кількість голосів</div>
+                                <div className={styles.menuitem}>Активні голосування</div>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ function Dashboard() {
                         <div className={styles.top}>
                             <div className={styles.left}>
                                 <h1 className={styles.num}>3</h1>
-                                <p className={styles.text}>Total Candidates</p>
+                                <p className={styles.text}>Всього кандидатів</p>
                             </div>
                             <div className={styles.right}>
                                 <Image
@@ -106,16 +106,16 @@ function Dashboard() {
                             </div>
                         </div>
                         <div className={styles.bottom} onClick={toggleMenuTwo}>
-                            <p className={styles.btext}>More info
+                            <p className={styles.btext}>Більше інформації
                                 <span
                                     className={styles.arrow}
                                     style={{ transform: menuOpenTwo ? 'rotate(180deg)' : 'rotate(0deg)' }}
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenTwo ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Highest Number of Candidates</div>
-                                <div className={styles.menuitem}>Average Number of Candidates</div>
-                                <div className={styles.menuitem}>Most Active Candidates</div>
+                                <div className={styles.menuitem}>Найбільша кількість кандидатів</div>
+                                <div className={styles.menuitem}>Середня кількість кандидатів</div>
+                                <div className={styles.menuitem}>Найактивніші кандидати</div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ function Dashboard() {
                         <div className={styles.top}>
                             <div className={styles.left}>
                                 <h1 className={styles.num}>3</h1>
-                                <p className={styles.text}>Total Voters</p>
+                                <p className={styles.text}>Всього виборців</p>
                             </div>
                             <div className={styles.right}>
                                 <Image
@@ -135,16 +135,16 @@ function Dashboard() {
                             </div>
                         </div>
                         <div className={styles.bottom} onClick={toggleMenuThree}>
-                            <p className={styles.btext}>More info
+                            <p className={styles.btext}>Більше інформації
                                 <span
                                     className={styles.arrow}
                                     style={{ transform: menuOpenThree ? 'rotate(180deg)' : 'rotate(0deg)' }}
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenThree ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Active Voters</div>
-                                <div className={styles.menuitem}>New Voters</div>
-                                <div className={styles.menuitem}>Average Age of Voters</div>
+                                <div className={styles.menuitem}>Активні виборці</div>
+                                <div className={styles.menuitem}>Нові виборці</div>
+                                <div className={styles.menuitem}>Середній вік виборців</div>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@ function Dashboard() {
                         <div className={styles.top}>
                             <div className={styles.left}>
                                 <h1 className={styles.num}>3</h1>
-                                <p className={styles.text}>No of Votings</p>
+                                <p className={styles.text}>Кількість голосів</p>
                             </div>
                             <div className={styles.right}>
                                 <Image
@@ -164,16 +164,16 @@ function Dashboard() {
                             </div>
                         </div>
                         <div className={styles.bottom} onClick={toggleMenuFour}>
-                            <p className={styles.btext}>More info
+                            <p className={styles.btext}>Більше інформації
                                 <span
                                     className={styles.arrow}
                                     style={{ transform: menuOpenFour ? 'rotate(180deg)' : 'rotate(0deg)' }}
                                 >&#9662;</span>
                             </p>
                             <div className={`${styles.menu} ${menuOpenFour ? styles.show : ''}`}>
-                                <div className={styles.menuitem}>Highest Number of Votes</div>
-                                <div className={styles.menuitem}>Average Number of Votes</div>
-                                <div className={styles.menuitem}>Increase in Activity</div>
+                                <div className={styles.menuitem}>Найбільша кількість голосів</div>
+                                <div className={styles.menuitem}>Середня кількість голосів</div>
+                                <div className={styles.menuitem}>Збільшення активності</div>
                             </div>
                         </div>
                     </div>

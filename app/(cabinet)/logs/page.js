@@ -38,7 +38,7 @@ function Page() {
           <div className={styles.dashboard}>
             <div className={styles.header}>
               <div className={styles.headerContainer}>
-                <h1>Audit logs</h1>
+                <h1>Журнали аудиту</h1>
               </div>
             </div>
 
@@ -46,10 +46,10 @@ function Page() {
               <input className={styles.search__input} type="text" placeholder="Search" />
               <div className={styles.dropdown}>
                 <select className={styles.dropdown__select}>
-                  <option value="">No Filters</option>
-                  <option value="vote">Vote</option>
-                  <option value="vote">Login</option>
-                  <option value="registration">Registration</option>
+                  <option value="">Без фільтрів</option>
+                  <option value="vote">Голосуйте</option>
+                  <option value="vote">Логін</option>
+                  <option value="registration">Реєстрація</option>
                 </select>
               </div>
               <div className={styles.range}>
@@ -62,13 +62,13 @@ function Page() {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>User ID</th>
-                <th>Action Type</th>
-                <th>Status</th>
-                <th>Signature</th>
-                <th>Action Details</th>
+                <th>Дата</th>
+                <th>Час</th>
+                <th>ID користувача</th>
+                <th>Тип дії</th>
+                <th>Статус</th>
+                <th>Підпис</th>
+                <th>Деталі дії</th>
               </tr>
             </thead>
             <tbody>

@@ -86,3 +86,4 @@ const DateRangeComp = ({ setDateRange }) => {
 };
 
 export default DateRangeComp;
+
